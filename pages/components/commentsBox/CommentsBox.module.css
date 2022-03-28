@@ -1,0 +1,149 @@
+.contentContainer {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  width: 50rem;
+  aspect-ratio: 2;
+  /* color: #ccc; */
+  color: rgba(235, 197, 61, 0.7);
+  margin-top: 100px;
+  padding: 1rem;
+}
+
+.content {
+  background-color: rgba(17, 33, 82, 0.8);
+  border: 2px solid rgba(207, 216, 25, 0.5);
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+
+  /* display: grid;
+  grid-template-columns: auto auto; */
+}
+
+.splitSection {
+  display: flex;
+}
+
+.helpBoard {
+  padding-left: 1rem;
+}
+
+.consensus {
+  border-right: 1px solid rgba(207, 216, 25, 0.5);
+  padding-right: 1rem;
+  min-width: 50%;
+}
+
+.consensusList {
+  height: 13.5rem;
+  overflow-y: scroll;
+}
+
+.consensus .ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.5rem;
+  padding: 0;
+  width: max-content;
+  margin-left: 1rem;
+  /* border: 1px solid red; */
+}
+
+.consensus .li {
+  border: 1px solid rgba(207, 216, 25, 0.5);
+  background-color: rgb(8, 25, 40);
+  width: max-content;
+  padding: 0.5rem 1rem;
+}
+
+.consensus .p {
+  margin: 0;
+  /* width: 50%; */
+}
+
+.noPending {
+  margin-top: 2rem;
+  width: max-content;
+  padding-left: 40%;
+  font-size: 0.9rem;
+  color: rgb(57, 129, 184);
+}
+
+.h3,
+.h3I {
+  font-size: 0.98rem;
+  width: max-content;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  background-color: rgba(17, 33, 82, 0.1);
+  border-bottom: 2px solid rgba(206, 216, 25, 0.7);
+  border-radius: 10px 10px 0 0;
+}
+
+.h3 {
+  margin-left: 1rem;
+}
+
+.messages {
+  display: flex;
+  margin-bottom: 1rem;
+  padding-bottom: 0;
+  border-bottom: 1px solid rgba(207, 216, 25, 0.5);
+  /* border-bottom: 1px solid rgba(207, 216, 25, 0.5); */
+}
+
+.currentMessage {
+  font-size: 1.25rem;
+  min-height: 2.5rem;
+}
+
+.helpList {
+  margin: 0;
+  padding: 0;
+}
+
+.currentMessage {
+  color: rgb(57, 129, 184);
+  font-weight: 600;
+  margin-left: 1rem;
+  width: 100%;
+  height: max-content;
+  padding: 0.5rem 0 0.5rem 1rem;
+  /* border-bottom: 1px solid rgba(207, 216, 25, 0.5); */
+  text-align: center;
+}
+
+.activeMessage {
+  animation: pulse 0.5s;
+}
+
+.helpBoard {
+  margin: 0 0 0 1rem;
+}
+
+.helpP {
+  /* font-family: 'Courier New', Courier, monospace; */
+  margin: 0.4rem;
+  font-size: 0.95rem;
+  list-style-type: square;
+  /* color: rgba(206, 216, 25, 0.7); */
+  color: rgb(57, 129, 184);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scaleX(1);
+  }
+
+  70% {
+    transform: scaleX(1.1);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}

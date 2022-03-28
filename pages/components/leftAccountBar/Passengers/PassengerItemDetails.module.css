@@ -1,0 +1,146 @@
+.container {
+  color: rgba(235, 197, 61, 0.8);
+  text-align: left;
+  position: fixed;
+  top: 25rem;
+  left: 1.5rem;
+  width: 16rem;
+  height: max-content;
+  /* background-color: #fff; */
+  background-color: rgba(17, 33, 82, 0.9);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 99999;
+  border: 2px solid rgba(207, 216, 25, 0.5);
+  animation: slide-down 300ms ease-out forwards;
+}
+
+.close {
+  position: absolute;
+  text-align: center;
+  top: 0.7rem;
+  right: 0.7rem;
+  width: 1.7rem;
+  aspect-ratio: 1;
+  font-size: 1rem;
+  border-radius: 50%;
+  border: 1px solid rgba(207, 216, 25, 0.5);
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 200ms ease-in-out;
+}
+
+.close:hover,
+.close:focus {
+  transform: scale(1.15);
+  color: rgb(235, 197, 71);
+  border-color: rgb(235, 197, 71);
+}
+
+.notSelected {
+  margin-top: 1rem;
+  font-size: 1rem;
+  border-top: 1px solid rgba(207, 216, 25, 0.5);
+  padding-top: 1rem;
+  color: rgba(235, 197, 71, 0.625);
+}
+
+.hero {
+  color: rgb(57, 129, 184);
+  padding-left: 0.3rem;
+}
+
+.h4 {
+  font-size: 1.2rem;
+  border-top: 1px solid rgba(207, 216, 25, 0.5);
+  padding-top: 1rem;
+}
+
+.p {
+  font-size: 0.85rem;
+  margin: 0;
+  padding: 0.3rem 0.2rem;
+}
+
+.button {
+  margin-top: 15px;
+  margin-left: 2rem;
+  padding: 0.3rem 1rem;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: rgba(235, 197, 71, 0.625);
+  border: 1px solid rgba(207, 216, 25, 0.5);
+  font-size: 0.9rem;
+  transform: scale(1);
+  transition: transform 250ms ease-in;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  color: rgb(235, 197, 71);
+  border-color: rgb(235, 197, 71);
+}
+
+.button:active {
+  transform: scale(1);
+  background-color: rgb(235, 197, 71);
+  color: #333;
+  border-color: rgba(235, 197, 71, 0.4);
+  font-weight: 900;
+  font-size: 0.8rem;
+}
+
+.relative {
+  position: relative;
+  /* color: rgba(207, 216, 25, 0.5); */
+}
+
+.relative2 {
+  position: relative;
+  color: rgba(211, 151, 19, 0.831);
+}
+
+.requirePay {
+  width: 15px;
+  aspect-ratio: 1;
+  position: absolute;
+  left: -0.3rem;
+  top: 4px;
+  border-radius: 50%;
+  background-color: rgba(184, 16, 16, 0.872);
+}
+
+.pay {
+  position: absolute;
+  width: max-content;
+  font-size: 0.7em;
+  left: 0.5rem;
+  bottom: -450%;
+  margin: 0;
+  padding: 1px 6px;
+  border: 1px solid rgba(207, 216, 25, 0.5);
+  cursor: pointer;
+  transform: skew(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.pay:hover,
+.pay:focus {
+  background-color: rgba(207, 216, 25, 0.5);
+  transform: skew(2deg, -2deg);
+  transition: transform 250ms ease-in-out;
+  color: #333;
+  font-weight: 800;
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

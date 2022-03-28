@@ -1,0 +1,55 @@
+.itemBody {
+  cursor: pointer;
+  position: relative;
+
+  /* transform: scale(1);
+  transition: transform 200ms ease-in rotate 200ms ease-in; */
+}
+
+.address {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  transform: scale(1);
+  transition: transform 200ms ease-in rotate 200ms ease-in;
+}
+
+.address:hover,
+.address:focus {
+  transform: scale(1.05);
+  transform: rotate(2deg);
+  color: #e87612;
+}
+
+.address:active {
+  transform: scale(1);
+  transform: rotate(-2deg);
+  transition: transform 200ms ease-in rotate 200ms ease-in;
+  color: rgba(207, 216, 25, 0.5);
+}
+
+.selected {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  color: rgb(32, 155, 32);
+  transform: scale(1.1);
+  cursor: default;
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  padding-right: 0px;
+  color: rgb(57, 129, 184);
+  margin-bottom: 45px;
+  transform: scale(1);
+  transition: transform 200ms ease-in;
+}
+
+.icon:hover,
+.icon:focus {
+  color: rgba(207, 216, 25, 0.9);
+  transform: scale(1.26);
+}

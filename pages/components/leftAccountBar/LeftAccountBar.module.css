@@ -1,0 +1,107 @@
+.content {
+  position: absolute;
+  top: -3rem;
+  left: 0;
+  width: 12.5rem;
+  height: 90%;
+  margin-top: 8rem;
+  font-size: 0.95rem;
+  background-color: rgba(17, 33, 82, 0.9);
+  padding: 2.5rem 0;
+  border-right: 2px solid rgba(207, 216, 25, 0.5);
+}
+
+.accountContent {
+  margin: 2rem auto;
+  width: 90%;
+  height: 25%;
+  border: 1px solid rgba(207, 216, 25, 0.5);
+  box-shadow: 0 0 0.4rem rgba(207, 216, 25, 0.8);
+  background-color: rgba(8, 25, 40, 0.7);
+  color: rgba(235, 197, 61, 0.8);
+}
+
+.last {
+  height: 27%;
+}
+
+.headText {
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 0.95rem 0 0 0;
+  width: max-content;
+  margin: 0 auto;
+  border-radius: 5%;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.accountList {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: 100%;
+  align-items: center;
+  height: 65%;
+  width: 90%;
+  margin: 0 auto;
+  border: 1px dashed #555;
+  background-color: #112152;
+}
+
+.listBody {
+  text-align: center;
+  width: 100%;
+  overflow-y: scroll;
+  list-style-type: none;
+  margin: 0;
+  padding: 0.75rem 0 0 0;
+}
+
+.empty {
+  color: rgb(57, 129, 184);
+}
+
+.iconS {
+  cursor: pointer;
+  position: absolute;
+  top: 0.9rem;
+  right: -3.25rem;
+  margin-right: 15px;
+  color: rgba(206, 216, 25, 0.7);
+  margin-bottom: 45px;
+  z-index: 50;
+  transform: scale(1);
+  transition: transform 200ms ease-in;
+}
+
+.iconS:hover,
+.iconS:focus {
+  color: rgba(207, 216, 25, 0.9);
+  transform: scale(1.26);
+  border-radius: 50%;
+  animation: pulse 1s infinite;
+}
+
+.iconS:active {
+  transform: scale(0.95);
+  color: #000;
+  background-color: rgb(53, 154, 19);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(199, 206, 245, 0.4);
+    /* background-color: rgba(167, 177, 249, 0.5); */
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(133, 151, 252, 0);
+    /* background-color: rgba(167, 177, 249, 0); */
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(133, 151, 252, 0);
+    /* background-color: rgba(167, 177, 249, 0.1); */
+  }
+}

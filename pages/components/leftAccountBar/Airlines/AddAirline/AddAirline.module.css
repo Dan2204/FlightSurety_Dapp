@@ -1,0 +1,220 @@
+.container {
+  position: fixed;
+  top: 10vh;
+  left: 1.5rem;
+  width: 29rem;
+  height: max-content;
+  color: #ddd;
+  /* background-color: rgb(12, 62, 106); */
+  background-color: rgba(17, 33, 82, 0.9);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(200, 200, 200, 0.6);
+  z-index: 9999;
+  border: 2px solid rgba(207, 216, 25, 0.5);
+  animation: slide-down 300ms ease-out forwards;
+}
+
+.head {
+  font-size: 1rem;
+  border-bottom: 2px solid rgba(206, 216, 25, 0.7);
+  padding: 0 0.3rem 0.5rem;
+  margin-bottom: 1rem;
+  width: max-content;
+  font-weight: 800;
+  letter-spacing: 0.04rem;
+  color: rgba(235, 197, 61, 0.8);
+}
+
+.formInput {
+  margin: 0;
+  width: 100%;
+  height: 6.5rem;
+  border-radius: 10px;
+  padding: 1rem;
+  border: 1px solid rgba(207, 216, 25, 0.25);
+  /* background-color: rgba(33, 33, 36, 0.488); */
+  background-color: rgba(8, 25, 40, 0.5);
+}
+
+.selectInput,
+.nameInput {
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid blue; */
+}
+
+.nameInput {
+  margin-bottom: 1rem;
+}
+
+.input {
+  width: 12.5rem;
+  height: 1.7rem;
+  padding: 5px 35px 5px 5px;
+  font-size: 0.9rem;
+  margin-left: auto;
+  color: rgba(235, 197, 61, 0.8);
+  background-color: rgb(32, 52, 130);
+  border: 2px solid rgba(235, 197, 61, 0.8);
+  border-radius: 5px;
+}
+
+.input:focus {
+  outline: 1px solid rgb(57, 129, 184);
+  border: 2px solid rgba(235, 197, 61, 0.8);
+  background-color: rgb(32, 52, 130);
+}
+
+.label {
+  font-size: 1rem;
+  color: rgba(235, 197, 61, 0.8);
+}
+
+.select {
+  width: 12.5rem;
+  height: 1.75rem;
+  /* padding: 5px 35px 5px 5px; */
+  font-size: 0.9rem;
+  color: rgba(235, 197, 61, 0.8);
+  background-color: rgb(32, 52, 130);
+  border: 2px solid rgba(235, 197, 61, 0.8);
+  margin-left: auto;
+  border: 2px solid rgba(235, 197, 61, 0.8);
+  border-radius: 5px;
+  padding-left: 0.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  /* background: url('../../../../img/down-arrow.jpeg') 100% / 10% no-repeat
+    rgba(32, 52, 130, 0.2); */
+}
+
+.selectInput:after {
+  content: '<>';
+  font: 12px 'Consolas', monospace;
+  font-weight: 900;
+  color: rgba(235, 197, 61, 0.8);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  position: absolute;
+  right: 3.6rem;
+  top: 7.8rem;
+  width: 1.3rem;
+  padding: 0 0 5px 3px;
+  border-bottom: 2px solid rgba(235, 197, 61, 0.8);
+  pointer-events: none;
+}
+
+.buttons {
+  padding-top: 1.25rem;
+  margin: 0;
+}
+
+.btn {
+  --transition-time: 300ms;
+  --delay-time: 150ms;
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  margin-right: 20px;
+  overflow: hidden;
+  border-radius: 8px;
+  transform: scale(1);
+  transition: transform 250ms ease-in-out;
+  position: relative;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.btnSubmit {
+  background-color: rgb(32, 52, 130);
+  border: 1px solid rgba(207, 216, 25, 0.5);
+  color: rgba(235, 197, 61, 0.8);
+}
+
+.btnSubmit:hover {
+  color: rgba(206, 216, 25, 0.7);
+  background-color: rgba(8, 25, 40, 0.5);
+}
+
+.btnCancel {
+  background-color: rgba(235, 197, 61, 0.8);
+  border: 1px solid rgb(169, 127, 150);
+  color: rgb(5, 105, 182);
+}
+
+.btnCancel:hover {
+  background-color: rgb(5, 105, 182);
+  color: rgba(235, 197, 61, 0.8);
+}
+
+.btn::before,
+.btn::after {
+  content: '';
+  position: absolute;
+  background-color: rgba(235, 197, 61, 0.8);
+  border-radius: 10px;
+}
+
+.btn::before {
+  bottom: 4px;
+  right: 0;
+  height: 1px;
+  width: 100%;
+
+  transform: scalex(0);
+  transform-origin: bottom;
+  transition: transform var(--transition-time) var(--delay-time) ease-in-out;
+}
+
+.btn:hover::before {
+  transition: transform var(--transition-time) ease-in-out;
+  transform: scaleX(0.7);
+  transform-origin: bottom;
+  box-shadow: 0 0 10 #000;
+}
+
+.btn::after {
+  bottom: 2px;
+  right: 15%;
+  height: 2px;
+  width: 70%;
+  border-radius: 0 0 20px 20px;
+
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform var(--transition-time) ease-in-out;
+}
+
+.btn:hover::after {
+  transition: transform var(--transition-time) var(--delay-time) ease-in-out;
+  transform: scaleY(1);
+  transform-origin: top;
+  color: purple;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  /* color: #ddd; */
+}
+
+.btn:active {
+  background-color: rgba(235, 197, 61, 0.8);
+  color: #000;
+  transform: scale(0.95);
+  transition: transform 200ms ease-in-out;
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
